@@ -1,0 +1,297 @@
+/* font-family: 'Caveat', cursive;
+font-family: 'Yeseva One', cursive; */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #8cc2be;
+    font-family: 'Caveat', cursive;
+    font-size: larger;
+}
+
+p {
+    font-family: 'Caveat', cursive;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.completed {
+    color: lightgray;
+}
+
+.container {
+    border-radius: 1rem;
+    background-color: aliceblue;
+    background-image: url('https://cdn.pixabay.com/photo/2016/12/22/21/39/new-years-day-1926337_960_720.jpg');
+    background-size: cover;
+    margin: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+}
+
+.create-tasks {
+    max-width: 300px;
+}
+
+.main-tasks {
+    padding: 1.25rem;
+    border-radius: 1rem;
+}
+
+.main-tasks ul {
+    margin-top: 20px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-tasks li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 0px 10px 10px 5px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    transition: background-color 0.3s ease-in-out;
+    width: 47%;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Yeseva One', cursive;
+    font-size: 25px;
+    margin: 12px;
+    text-align: center;
+}
+
+#search {
+    border-radius: 5px;
+    width: 250px;
+    height: 3rem;
+
+}
+
+.main-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: linear-gradient(to bottom right, turquoise, darkcyan);
+    /* background-color: rgba(54, 25, 25, .00004); */
+    border-radius: 1rem;
+    padding: 1.25rem;
+    margin: 1.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card label {
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.card input[type="text"],
+.card input[type="date"] {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    max-width: 250px;
+}
+
+.card select {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    max-width: 648px;
+}
+
+.big-button {
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px 0 20px 0;
+    padding: 10px;
+    width: 100%;
+    font-family: 'Yeseva One', cursive;
+}
+
+.big-button:hover {
+    filter: opacity(90%);
+}
+
+.hidden {
+    display: none;
+}
+
+.filter {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 10px auto;
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+}
+
+.filter h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.filter label {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.filter select {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 22%;
+}
+
+::-webkit-input-placeholder {
+    color: #666666;
+    font-size: large;
+}
+
+.card select {
+    font-family: 'Caveat', cursive;
+    font-size: large;
+    color: #666666;
+}
+
+.card input {
+    font-family: 'Caveat', cursive;
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+li button {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to bottom right, turquoise, darkcyan);
+    border: none;
+    border-radius: 5px;
+    color: whitesmoke;
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 20px 10px 10px 0;
+    padding: 10px;
+    font-family: 'Yeseva One', cursive;
+    width: 70px;
+    
+}
+
+li button:hover {
+    cursor: pointer;
+    filter: opacity(70%);
+}
+
+li span:nth-child(n+4) {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+}
+
+li span:nth-child(-n+3) {
+    font-family: 'Yeseva One', cursive;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+#tasksList form {
+    margin-right: 50px;
+} 
+
+form input {
+    width: 228px;
+}
+
+form button {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 20px 10px 20px 0;
+    padding: 10px;
+    font-family: 'Yeseva One', cursive;
+    width: 70px;
+}
+
+input[type="checkbox"] {
+    margin: 0 6px 6px 0;
+}
+
+#filterByBoth {
+    border-radius: 5px;
+    background-color: darkcyan;
+    color: whitesmoke;
+    border: none;
+    cursor: pointer;
+    font-family: 'Caveat', cursive;
+    font-size: 16px;
+    padding: 2px 6px 2px 6px;
+}
+
+#filterByBoth:hover {
+    filter: opacity(80%);
+}
+
+
+

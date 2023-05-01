@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS ToDo App</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- JavaScript -->
+    <script defer src="index.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Yeseva+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="container">
+        <section class="left-bar">
+            <section class="filter-icon">
+                <img />
+            </section>
+        </section>
+
+        <section class="card create-tasks">
+            <h2>Create your tasks</h2>
+            <label for="taskTitle">Task</label>
+            <input type="text" placeholder="Write your task" id="taskTitle">
+        
+            <label for="taskDescription">Task Description:</label>
+            <input type="text" placeholder="Write a description" id="taskDescription">
+        
+            <label for="taskDeadline">Deadline date:</label>
+            <input type="date" id="taskDeadline">
+        
+            <label for="taskPriority">Priority</label>
+            <select id="taskPriority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+                <option value="urgent">Urgent</option>
+            </select>
+            <button id="addTaskBtn" class="big-button">Add Task</button>
+            <button class="big-button" id="showAll">Show all tasks</button>
+            <form>
+                <label class="hidden" for="search"></label>
+                <input type="text" id="search" name="search" placeholder="Searching for...  ">
+                <button class="hidden" type="submit" onclick="handleSearch(event)">Search</button>
+            </form>
+        </section>
+
+        <section class="main-tasks">
+            <section class="main-title">
+                <h1 class="title">ToDo App</h1>
+                <p>By Paola Ortiz</p>
+            </section>
+
+
+            <section class="filter">
+                <select id="sortedBy">
+                    <option value="title">Title</option>
+                    <option value="description">Description</option>
+                    <option value="deadline">Deadline</option>
+                    <option value="priority">Priority</option>
+                </select>
+                <select id="sortOrder">
+                    <option value="ascending">Ascending</option>
+                    <option value="descending">Descending</option>
+                </select>
+                <select id="filterByStatus">
+                    <option value="completed">Completed</option>
+                    <option value="incomplete">Incomplete</option>
+                </select>
+                <!-- <h4>By Priority</h4> -->
+                <select id="filterByPriority">
+                    <option value="urgent">Urgent</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+                <button id="filterByBoth">Filter by both Status and Priority</button><br>
+            </section>
+
+            <section class="tasks-section">
+
+                <section class="card">
+                    <h2 id="quote">Current tasks.</h2>
+                    <ul id="tasksList"></ul>
+                </section>
+            </section>
+        </section>
+    </section>
+</body>
+</html>
